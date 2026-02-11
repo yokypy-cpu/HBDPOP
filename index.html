@@ -2,81 +2,55 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HEY BABY 💕</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Mali:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
+body{
+  margin:0;
   font-family:'Quicksand', sans-serif;
-  text-align: center;
-  background: linear-gradient(180deg,#ffe6f0,#fff5fa);
-  overflow-x: hidden;
+  text-align:center;
+  background:linear-gradient(180deg,#ffe6f0,#fff5fa);
+  overflow-x:hidden;
 }
 
-h1 {
+h1{
   font-family:'Pacifico', cursive;
-  margin-top: 35px;
-  color: #ff4d88;
+  margin-top:40px;
+  color:#ff4d88;
 }
 
-.subtitle {
-  font-size: 14px;
-  margin-bottom: 15px;
-}
+.subtitle{font-size:14px;margin-bottom:20px;}
 
 /* LOCK BUTTON */
-.back-lock {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 20px;
-  background: #ffffffcc;
-  backdrop-filter: blur(6px);
-  font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  display: none;
+.back-lock{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 14px;
+  border:none;
+  border-radius:20px;
+  background:#ffffffcc;
+  backdrop-filter:blur(6px);
+  font-size:14px;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  display:none;
 }
 
 /* PIN */
-.pin-display {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 15px 0;
-}
-.dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #ff8fb1;
-  opacity: 0.3;
-}
+.pin-display{display:flex;justify-content:center;gap:10px;margin:20px 0;}
+.dot{width:14px;height:14px;border-radius:50%;background:#ff8fb1;opacity:0.3;}
 .dot.filled{opacity:1;}
 
-.keypad {
-  display: grid;
-  grid-template-columns: repeat(3, 70px);
-  gap: 12px;
-  justify-content: center;
-  margin-bottom: 25px;
-}
-.key {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+.keypad{display:grid;grid-template-columns:repeat(3,80px);gap:15px;justify-content:center;}
+.key{
+  width:80px;height:80px;border-radius:50%;background:white;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;cursor:pointer;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 .key:active{transform:scale(0.9);}
 
@@ -88,63 +62,39 @@ h1 {
 }
 
 /* MENU */
-.choice {
-  width:85%;
-  max-width:300px;
-  margin:18px auto;
-  padding:18px;
-  background:white;
-  border-radius:22px;
-  font-size:19px;
-  font-weight:600;
-  cursor:pointer;
-  box-shadow:0 12px 28px rgba(0,0,0,0.1);
+.choice{
+  width:85%;max-width:320px;margin:20px auto;padding:20px;
+  background:white;border-radius:25px;font-size:20px;font-weight:600;
+  cursor:pointer;box-shadow:0 15px 30px rgba(0,0,0,0.1);
   transition:0.3s;
 }
-.choice:hover{transform:translateY(-4px);}
+.choice:hover{transform:translateY(-5px);}
 
 /* YES NO */
 .yn-btn{
-  padding:10px 24px;
-  margin:12px;
-  border:none;
-  border-radius:25px;
-  font-size:17px;
-  cursor:pointer;
+  padding:12px 28px;margin:15px;border:none;
+  border-radius:30px;font-size:18px;cursor:pointer;
   transition:0.3s;
 }
 .yes{background:#ff6fa5;color:white;}
 .no{background:#ddd;}
 
 /* CARD */
-.scene{
-  width:90%;
-  max-width:340px;
-  height:450px;
-  margin:40px auto;
-  perspective:1300px;
-}
+.scene{width:340px;height:500px;margin:50px auto;perspective:1500px;}
 .card{
-  width:100%;
-  height:100%;
-  position:relative;
+  width:100%;height:100%;position:relative;
   transform-style:preserve-3d;
   transition:transform 1s;
 }
 .card.flip{transform:rotateY(180deg);}
 
 .card-face{
-  position:absolute;
-  width:100%;
-  height:100%;
-  border-radius:28px;
-  backface-visibility:hidden;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.22);
+  position:absolute;width:100%;height:100%;
+  border-radius:30px;backface-visibility:hidden;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  padding:25px;
+  box-shadow:0 40px 80px rgba(0,0,0,0.25);
 }
 
 .front{background:linear-gradient(135deg,#ffffff,#ffe6f2);}
@@ -154,48 +104,22 @@ h1 {
 }
 
 .card img{
-  width:88%;
-  height:70%;
-  object-fit:cover;
-  border-radius:20px;
-  margin-bottom:12px;
+  width:200px;border-radius:20px;margin-bottom:15px;
 }
 
-.overlay-text{
-  position:absolute;
-  bottom:15px;
-  left:50%;
-  transform:translateX(-50%);
-  background:rgba(255,255,255,0.8);
-  padding:6px 16px;
-  border-radius:18px;
-  font-size:14px;
-}
-
-/* Back message */
 .wish{
   font-family:'Mali', cursive;
-  font-size:18px;
-  line-height:1.6;
+  font-size:19px;line-height:1.7;
 }
 
-/* Go to button */
 .nav-btn{
-  margin-top:12px;
-  padding:8px 18px;
-  border:none;
-  border-radius:18px;
-  background:#ff8fb1;
-  color:white;
-  font-size:16px;
-  cursor:pointer;
+  margin-top:15px;padding:10px 20px;border:none;
+  border-radius:20px;background:#ff8fb1;color:white;cursor:pointer;
 }
 
-/* HEART EFFECT */
+/* HEART */
 .heart{
-  position:fixed;
-  bottom:-20px;
-  font-size:20px;
+  position:fixed;bottom:-20px;font-size:20px;
   animation:floatUp 3s linear forwards;
 }
 @keyframes floatUp{
@@ -204,39 +128,26 @@ h1 {
 
 /* MUSIC */
 .music-btn{
-  position:fixed;
-  top:15px;
-  right:15px;
+  position:fixed;top:15px;right:15px;
   width:45px;height:45px;border:none;
   border-radius:50%;background:#ff8fb1;
   color:white;font-size:18px;cursor:pointer;
-}
-
-/* Responsive tweaks for iPhone 13 / small screens */
-@media screen and (max-width: 390px) {
-  h1 {font-size:28px;}
-  .key {width:60px;height:60px;font-size:18px;}
-  .choice {font-size:18px;padding:16px;}
-  .yn-btn {font-size:16px;padding:10px 20px;}
-  .nav-btn {font-size:15px;padding:8px 16px;}
 }
 </style>
 </head>
 <body>
 
 <div id="app"></div>
-
 <button class="music-btn" onclick="toggleMusic()">🎵</button>
 <button class="back-lock" id="lockBtn" onclick="goToLock()">🔐 Lock</button>
 
-<!-- Hidden iframe for YouTube -->
 <div style="position:fixed;width:0;height:0;overflow:hidden;">
   <iframe id="ytFrame" src="" frameborder="0" allow="autoplay"></iframe>
 </div>
 
 <script>
 
-const correctPin="2802";  // รหัส PIN
+const correctPin="2802";  // รหัส PIN ที่ต้องการ
 let inputPin="";
 let selectedType="";
 let yesScale=1;
@@ -244,16 +155,16 @@ let musicPlaying=false;
 
 showLogin();
 
-/* ===== LOGIN ===== */
+/* LOGIN */
 function showLogin(){
-  document.getElementById("lockBtn").style.display="none";
-  document.getElementById("app").innerHTML=
-    '<h1>HEY BABY! 💕</h1>'+
-    '<div class="subtitle">WOULD YOU LIKE TO SEE YOUR GIFT?</div>'+
-    '<div class="pin-display" id="pinBox">'+
-      '<div class="dot"></div><div class="dot"></div>'+
-      '<div class="dot"></div><div class="dot"></div></div>'+
-    '<div class="keypad">'+createKeys()+'</div>';
+document.getElementById("lockBtn").style.display="none";  // ซ่อนปุ่มล็อคในหน้าแรก
+document.getElementById("app").innerHTML=
+  '<h1>HEY BABY! 💕</h1>'+
+  '<div class="subtitle">WOULD YOU LIKE TO SEE YOUR GIFT?</div>'+
+  '<div class="pin-display" id="pinBox">'+
+  '<div class="dot"></div><div class="dot"></div>'+
+  '<div class="dot"></div><div class="dot"></div></div>'+
+  '<div class="keypad">'+createKeys()+'</div>';
 }
 
 function createKeys(){
@@ -271,7 +182,7 @@ function press(num){
   if(inputPin.length<4){
     inputPin+=num;
     updateDots();
-    if(inputPin.length===4) setTimeout(checkPin,300);
+    if(inputPin.length===4){setTimeout(checkPin,300);}
   }
 }
 
@@ -282,14 +193,14 @@ function del(){
 
 function updateDots(){
   let dots=document.querySelectorAll(".dot");
-  dots.forEach((d,i)=>d.classList.toggle("filled", i<inputPin.length));
+  dots.forEach((d,i)=>d.classList.toggle("filled",i<inputPin.length));
 }
 
 function checkPin(){
   if(inputPin===correctPin){
     startMusic();
     showMenu();
-  } else {
+  }else{
     let box=document.getElementById("pinBox");
     box.classList.add("shake");
     setTimeout(()=>box.classList.remove("shake"),400);
@@ -297,103 +208,108 @@ function checkPin(){
   }
 }
 
-/* ===== MUSIC ===== */
+/* MUSIC */
 function startMusic(){
   document.getElementById("ytFrame").src=
-    "https://www.youtube.com/embed/U4NsaPYrNvw?autoplay=1&loop=1&playlist=U4NsaPYrNvw";
+  "https://www.youtube.com/embed/U4NsaPYrNvw?autoplay=1&loop=1&playlist=U4NsaPYrNvw";
   musicPlaying=true;
 }
-
 function toggleMusic(){
   let frame=document.getElementById("ytFrame");
-  if(musicPlaying){ frame.src=""; musicPlaying=false; }
-  else startMusic();
-}
-
-/* ===== BACK TO LOCK ===== */
-function goToLock(){
-  document.getElementById("ytFrame").src="";
-  musicPlaying=false;
-  inputPin=""; selectedType=""; yesScale=1;
-  showLogin();
-}
-
-/* ===== MENU ===== */
-function showMenu(){
-  document.getElementById("lockBtn").style.display="block";
-  document.getElementById("app").innerHTML=
-    '<h1>Choose Your Postcard 💌</h1>'+
-    '<div class="choice" onclick="askOpen(\'birthday\')">Happy Birth Day 🎂</div>'+
-    '<div class="choice" onclick="askOpen(\'valentine\')">Valentine Day 💘</div>';
-}
-
-/* ===== YES / NO ===== */
-function askOpen(type){
-  selectedType=type; yesScale=1;
-  document.getElementById("app").innerHTML=
-    '<h1>Are you sure? 💕</h1>'+
-    '<button id="yesBtn" class="yn-btn yes" onclick="openCard()">Yes 💗</button>'+
-    '<button class="yn-btn no" onclick="growYes()">No 🙈</button>';
-}
-function growYes(){
-  yesScale += 0.3;
-  document.getElementById("yesBtn").style.transform="scale("+yesScale+")";
-}
-function openCard(){
-  if(selectedType==="birthday") birthdayCard();
-  else valentineCard();
-}
-
-/* ===== HEART EFFECT ===== */
-function createHearts(){
-  for(let i=0;i<10;i++){
-    let h=document.createElement("div");
-    h.className="heart";
-    h.innerHTML="💗";
-    h.style.left=Math.random()*100+"vw";
-    h.style.fontSize=(20+Math.random()*20)+"px";
-    document.body.appendChild(h);
-    setTimeout(()=>h.remove(),3000);
+  if(musicPlaying){
+    frame.src="";
+    musicPlaying=false;
+  }else{
+    startMusic();
   }
 }
 
-/* ===== CARD ===== */
+/* MENU */
+function showMenu(){
+  document.getElementById("lockBtn").style.display="block";  // แสดงปุ่มล็อคหลังจากผ่านการใส่ PIN
+  document.getElementById("app").innerHTML=
+  '<h1>Choose Your Postcard 💌</h1>'+
+  '<div class="choice" onclick="askOpen(\'birthday\')">Happy Birth Day 🎂</div>'+
+  '<div class="choice" onclick="askOpen(\'valentine\')">Valentine Day 💘</div>';
+}
+
+/* YES NO */
+function askOpen(type){
+  selectedType=type;yesScale=1;
+  document.getElementById("app").innerHTML=
+  '<h1>Are you sure? 💕</h1>'+
+  '<button id="yesBtn" class="yn-btn yes" onclick="openCard()">Yes 💗</button>'+
+  '<button class="yn-btn no" onclick="growYes()">No 🙈</button>';
+}
+function growYes(){
+  yesScale+=0.3;
+  document.getElementById("yesBtn").style.transform="scale("+yesScale+")";
+}
+function openCard(){
+  if(selectedType==="birthday"){birthdayCard();}
+  else{valentineCard();}
+}
+
+/* HEART */
+function createHearts(){
+  for(let i=0;i<10;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="💗";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(20+Math.random()*20)+"px";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),3000);
+  }
+}
+
+/* CARD */
 function createCard(title,img,message,nextText,nextFunc){
   document.getElementById("app").innerHTML=
-    '<div class="scene"><div class="card" id="card">'+
-    '<div class="card-face front">'+
-    '<img src="'+img+'"><div class="overlay-text">Tap to flip 💕</div></div>'+
-    '<div class="card-face back">'+
-    '<h2>'+title+'</h2><div class="wish">'+message+'</div>'+
-    '<button class="nav-btn" onclick="'+nextFunc+'()">Go to '+nextText+'</button>'+
-    '</div></div></div>';
+  '<div class="scene">'+
+  '<div class="card" id="card">'+
+  '<div class="card-face front">'+
+  '<img src="'+img+'">'+
+  '<p>Tap to flip</p></div>'+
+  '<div class="card-face back">'+
+  '<h2>'+title+'</h2>'+
+  '<div class="wish">'+message+'</div>'+
+  '<button class="nav-btn" onclick="'+nextFunc+'()">Go to '+nextText+'</button>'+
+  '</div></div></div>';
 
   const card=document.getElementById("card");
   card.addEventListener("click",function(e){
     if(e.target.tagName==="BUTTON") return;
     this.classList.toggle("flip");
-    setTimeout(()=>createHearts(), 300);
+    createHearts();
   });
 }
 
 function birthdayCard(){
   createCard(
     "Happy Birth Day 🎂",
-    "https://scontent-bkk1-2.xx.fbcdn.net/v/t39.30808-6/497070501_9782568438489494_8441388958874456325_n.jpg",
-    "ขอให้ปีนี้มีความสุขมากๆนะคะ 💖 เค้าจะอยู่ข้าง ๆ เสมอ ✨",
+    "https://scontent-bkk1-2.xx.fbcdn.net/v/t39.30808-6/497070501_9782568438489494_8441388958874456325_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=MIuC92tpgXYQ7kNvwFiulzX&_nc_oc=AdmS1akKKRoj-U3WpWZvgW37TuFE2VYC52WgEYoRysOmuLHq798KiGsv8sVsjOdlOuI&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_gid=vq3aOiX1yza_IVlVw9espQ&oh=00_AfvIMWXGYad2BNHZBoya1GpKVQ9I5MwWPwjziYD1nx5Scw&oe=69922D6E",
+    "ขอให้ปีนี้มีความสุขมากๆนะคะ ตั้งใจทำงาน และเลิกเมาได้แล้วนะคะ 💖<br>เค้าจะอยู่ข้าง ๆ เสมอ ✨",
     "Valentine Day 💘",
     "valentineCard"
   );
 }
-
 function valentineCard(){
   createCard(
     "Valentine Day 💘",
-    "https://scontent-bkk1-1.xx.fbcdn.net/v/t39.30808-6/514412307_23902563776063390_341090073524059491_n.jpg",
-    "วาเลนไทน์ปีนี้สนุกและหวานมากนะคะ 💕 รักเธอที่สุดเลย 💗",
+    "https://scontent-bkk1-1.xx.fbcdn.net/v/t39.30808-6/514412307_23902563776063390_341090073524059491_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=jw9wn15wAlwQ7kNvwGAXP5u&_nc_oc=Adkyte29GGLMhF_9rBxp-vI3slkLk1OLss8rO1nNZoixLrswUVc9mbtTh2t0EVkrVRY&_nc_zt=23&_nc_ht=scontent-bkk1-1.xx&_nc_gid=KxsYDS-wyBuHyHv_2_Al_w&oh=00_Afv3cs7bCIlX0Hi2i6VXiQ9OuJWeZIm-B2Tc2UOfYKpkPA&oe=699224B1",
+    "วาเลนไทน์ปีนี้ ไม่รู้ว่ามีเด็กคนนี้แล้วแฮปปี้ไหม แต่ขอบคุณที่เข้ามาเป็นความสุขให้นะคะ 💕<br>รักเธอมากที่สุดเลย",
     "Happy Birth Day 🎂",
     "birthdayCard"
   );
+}
+
+/* BACK TO LOCK */
+function goToLock(){
+  document.getElementById("ytFrame").src="";
+  musicPlaying=false;
+  inputPin="";selectedType="";yesScale=1;
+  showLogin();
 }
 
 </script>
